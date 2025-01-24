@@ -19,22 +19,22 @@ function RegisterAndLogout() {
 
 function App() {
   return (
-    <BrowserRouter>
+     <BrowserRouter>
       <Routes>
-        <Route>
+        <Route
           path="/"
           element={
             <ProtectedRoute>
               <Home />
             </ProtectedRoute>
           }
-        </Route>
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterAndLogout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App
